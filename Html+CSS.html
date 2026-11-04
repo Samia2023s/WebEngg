@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>LearnPro Academy</title>
+
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f4f6f8;
+        color: #333;
+        line-height: 1.6;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.dark-mode {
+        background-color: #1b1b1b;
+        color: #f1f1f1;
+    }
+
+    header {
+        background-color: #1e3a5f;
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 40px;
+    }
+
+    header p {
+        margin: 8px 0 0;
+        font-size: 18px;
+    }
+
+    #academy-status {
+        font-weight: bold;
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    #theme-toggle {
+        margin-top: 15px;
+        background-color: #ffd166;
+        color: #222;
+        font-weight: bold;
+    }
+
+    nav {
+        background-color: #14283f;
+        text-align: center;
+        padding: 15px;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        margin: 0 10px;
+    }
+
+    nav a:hover {
+        color: #ffd166;
+    }
+
+    main {
+        max-width: 1100px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    section {
+        background-color: white;
+        margin: 25px 0;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    body.dark-mode section {
+        background-color: #292929;
+    }
+
+    h2 {
+        color: #1e3a5f;
+        border-bottom: 2px solid #1e3a5f;
+        padding-bottom: 8px;
+    }
+
+    body.dark-mode h2 {
+        color: #8fc7ff;
+        border-bottom-color: #8fc7ff;
+    }
+
+    h3 {
+        color: #2c5f8a;
+    }
+
+    body.dark-mode h3 {
+        color: #8fc7ff;
+    }
+
+    section img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin: 20px auto;
+        border-radius: 10px;
+    }
+
+    section a {
+        color: #1e3a5f;
+        font-weight: bold;
+    }
+
+    section a:hover {
+        color: #d97706;
+    }
+
+    article {
+        background-color: #f4f6f8;
+        padding: 20px;
+        margin: 15px 0;
+        border-left: 5px solid #1e3a5f;
+        border-radius: 6px;
+    }
+
+    body.dark-mode article {
+        background-color: #353535;
+    }
+
+    article h3 {
+        margin-top: 0;
+    }
+
+    .extra-content {
+        display: none;
+    }
+
+    ol,
+    ul {
+        padding-left: 30px;
+    }
+
+    li {
+        margin: 8px 0;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    caption {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #1e3a5f;
+    }
+
+    body.dark-mode caption {
+        color: #8fc7ff;
+    }
+
+    th {
+        background-color: #1e3a5f;
+        color: white;
+        padding: 12px;
+        text-align: left;
+    }
+
+    td {
+        padding: 12px;
+        border: 1px solid #ccc;
+    }
+
+    tr:nth-child(even) {
+        background-color: #f4f6f8;
+    }
+
+    body.dark-mode tr:nth-child(even) {
+        background-color: #353535;
+    }
+
+    .course-row.highlight {
+        background-color: #ffe9a8 !important;
+        color: #222;
+    }
+
+    form {
+        max-width: 700px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"] {
+        margin-right: 6px;
+    }
+
+    textarea {
+        resize: vertical;
+    }
+
+    button {
+        padding: 11px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 15px;
+        margin-right: 10px;
+    }
+
+    button[type="submit"] {
+        background-color: #1e3a5f;
+        color: white;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #2c5f8a;
+    }
+
+    button[type="reset"] {
+        background-color: #777;
+        color: white;
+    }
+
+    button[type="reset"]:hover {
+        background-color: #555;
+    }
+
+    .filter-buttons {
+        margin: 15px 0;
+    }
+
+    .filter-buttons button {
+        background-color: #1e3a5f;
+        color: white;
+    }
+
+    .filter-buttons button:hover {
+        background-color: #2c5f8a;
+    }
+
+    #total {
+        font-size: 18px;
+        font-weight: bold;
+        color: #1e3a5f;
+        margin-top: 20px;
+    }
+
+    body.dark-mode #total {
+        color: #8fc7ff;
+    }
+
+    #form-message,
+    #discount-message {
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+    #character-count {
+        font-size: 14px;
+        color: #666;
+    }
+
+    body.dark-mode #character-count {
+        color: #ccc;
+    }
+
+    footer {
+        background-color: #14283f;
+        color: white;
+        text-align: center;
+        padding: 30px 20px;
+        margin-top: 30px;
+    }
+
+    footer h2 {
+        color: white;
+        border-bottom: none;
+    }
+
+    footer a {
+        color: #ffd166;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+        header h1 {
+            font-size: 30px;
+        }
+
+        nav a {
+            display: block;
+            margin: 8px 0;
+        }
+
+        main {
+            padding: 10px;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        table {
+            font-size: 13px;
+        }
+
+        th,
+        td {
+            padding: 8px;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<header>
+    <h1>LearnPro Academy</h1>
+    <p>Learn New Skills and Build Your Future</p>
+
+    <div id="academy-status"></div>
+
+    <button id="theme-toggle" type="button">
+        Toggle Light/Dark Mode
+    </button>
+</header>
+
+<nav>
+    <a href="#home">Home</a> |
+    <a href="#courses">Courses</a> |
+    <a href="#schedule">Schedule</a> |
+    <a href="#enroll">Enroll Now</a> |
+    <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+    <section id="home">
+
+        <h2>Welcome to LearnPro Academy</h2>
+
+        <p>
+            LearnPro Academy provides practical courses
+            to help students develop useful professional skills.
+        </p>
+
+        <article>
+
+            <h3>About LearnPro Academy</h3>
+
+            <p>
+                LearnPro Academy is dedicated to helping students learn practical
+                skills that can support their education and future careers.
+            </p>
+
+            <div id="more-story" class="extra-content">
+
+                <p>
+                    Our learning environment focuses on useful technology,
+                    creative skills, and flexible learning opportunities.
+                    Students can choose courses that match their interests
+                    and develop skills through structured lessons and practice.
+                </p>
+
+            </div>
+
+            <button id="read-more-btn" type="button">
+                Read More
+            </button>
+
+        </article>
+
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644"
+             alt="Students learning together"
+             width="500">
+
+        <p>
+            <a href="https://www.google.com">
+                Learn More About Online Courses
+            </a>
+        </p>
+
+    </section>
+
+
+    <section id="courses">
+
+        <h2>Our Popular Courses</h2>
+
+        <article>
+
+            <h3>Web Development</h3>
+
+            <p>
+                Learn HTML, CSS and basic JavaScript
+                to create websites.
+            </p>
+
+            <p>Duration: 8 Weeks</p>
+
+            <p>Fee: Rs. 8,000</p>
+
+            <label>
+                <input type="checkbox"
+                       class="course-fee"
+                       value="8000">
+
+                Select Web Development - Rs. 8,000
+            </label>
+
+        </article>
+
+
+        <article>
+
+            <h3>Graphic Designing</h3>
+
+            <p>
+                Learn design principles and create
+                professional graphics.
+            </p>
+
+            <p>Duration: 6 Weeks</p>
+
+            <p>Fee: Rs. 7,000</p>
+
+            <label>
+                <input type="checkbox"
+                       class="course-fee"
+                       value="7000">
+
+                Select Graphic Designing - Rs. 7,000
+            </label>
+
+        </article>
+
+
+        <article>
+
+            <h3>Digital Marketing</h3>
+
+            <p>
+                Learn social media marketing, content creation
+                and digital marketing strategies.
+            </p>
+
+            <p>Duration: 8 Weeks</p>
+
+            <p>Fee: Rs. 9,000</p>
+
+            <label>
+                <input type="checkbox"
+                       class="course-fee"
+                       value="9000">
+
+                Select Digital Marketing - Rs. 9,000
+            </label>
+
+        </article>
+
+
+        <p id="total">
+            Total Course Fee: Rs. 0
+        </p>
+
+    </section>
+
+
+    <section>
+
+        <h2>How to Join a Course</h2>
+
+        <ol type="A">
+
+            <li>Choose your favorite course.</li>
+
+            <li>Fill out the enrollment form.</li>
+
+            <li>Select your preferred schedule.</li>
+
+            <li>Submit your enrollment request.</li>
+
+        </ol>
+
+    </section>
+
+
+    <section>
+
+        <h2>Why Choose LearnPro?</h2>
+
+        <ul>
+
+            <li>Practical learning</li>
+
+            <li>Experienced instructors</li>
+
+            <li>Flexible schedules</li>
+
+            <li>Affordable course fees</li>
+
+        </ul>
+
+    </section>
+
+
+    <section id="schedule">
+
+        <h2>Course Schedule and Fees</h2>
+
+
+        <div class="filter-buttons">
+
+            <button type="button"
+                    data-filter="all">
+                All
+            </button>
+
+            <button type="button"
+                    data-filter="Courses">
+                Courses
+            </button>
+
+            <button type="button"
+                    data-filter="Workshops">
+                Workshops
+            </button>
+
+        </div>
+
+
+        <table border="1">
+
+            <caption>
+                Available Courses
+            </caption>
+
+
+            <tr>
+
+                <th>Course</th>
+
+                <th>Duration</th>
+
+                <th>Schedule</th>
+
+                <th>Fee</th>
+
+            </tr>
+
+
+            <tr class="course-row"
+                data-category="Courses">
+
+                <td>
+                    Web Development
+                </td>
+
+                <td>
+                    8 Weeks
+                </td>
+
+                <td>
+                    Monday & Wednesday
+                </td>
+
+                <td>
+                    Rs. 8,000
+                </td>
+
+            </tr>
+
+
+            <tr class="course-row"
+                data-category="Courses">
+
+                <td>
+                    Graphic Designing
+                </td>
+
+                <td>
+                    6 Weeks
+                </td>
+
+                <td>
+                    Tuesday & Thursday
+                </td>
+
+                <td>
+                    Rs. 7,000
+                </td>
+
+            </tr>
+
+
+            <tr class="course-row"
+                data-category="Courses">
+
+                <td>
+                    Digital Marketing
+                </td>
+
+                <td>
+                    8 Weeks
+                </td>
+
+                <td>
+                    Saturday & Sunday
+                </td>
+
+                <td>
+                    Rs. 9,000
+                </td>
+
+            </tr>
+
+        </table>
+
+    </section>
+
+
+    <section id="enroll">
+
+        <h2>Course Enrollment Form</h2>
+
+
+        <form id="feedback-form">
+
+
+            <p>
+
+                <label for="name">
+                    Full Name:
+                </label>
+
+                <input type="text"
+                       id="name"
+                       name="name">
+
+            </p>
+
+
+            <p>
+
+                <label for="email">
+                    Email:
+                </label>
+
+                <input type="email"
+                       id="email"
+                       name="email">
+
+            </p>
+
+
+            <p>
+
+                <label for="birth-year">
+                    Birth Year:
+                </label>
+
+                <input type="text"
+                       id="birth-year"
+                       name="birth-year"
+                       placeholder="e.g. 2002">
+
+            </p>
+
+
+            <p>
+
+                <label for="date">
+                    Preferred Start Date:
+                </label>
+
+                <input type="date"
+                       id="date"
+                       name="date">
+
+            </p>
+
+
+            <h3>Select Course</h3>
+
+
+            <input type="radio"
+                   id="web"
+                   name="course">
+
+            <label for="web">
+                Web Development
+            </label>
+
+
+            <input type="radio"
+                   id="design"
+                   name="course">
+
+            <label for="design">
+                Graphic Designing
+            </label>
+
+
+            <input type="radio"
+                   id="marketing"
+                   name="course">
+
+            <label for="marketing">
+                Digital Marketing
+            </label>
+
+
+            <h3>Additional Options</h3>
+
+
+            <input type="checkbox"
+                   id="certificate"
+                   name="certificate">
+
+            <label for="certificate">
+                Certificate
+            </label>
+
+
+            <input type="checkbox"
+                   id="recordings"
+                   name="recordings">
+
+            <label for="recordings">
+                Course Recordings
+            </label>
+
+
+            <p>
+
+                <label for="special-notes">
+                    Special Learning Requests / Additional Notes:
+                </label>
+
+            </p>
+
+
+            <textarea id="special-notes"
+                      name="special-notes"
+                      rows="4"
+                      maxlength="100"></textarea>
+
+
+            <p id="character-count">
+                100 characters remaining
+            </p>
+
+
+            <p>
+
+                <label for="message">
+                    Any Questions:
+                </label>
+
+            </p>
+
+
+            <textarea id="message"
+                      name="message"
+                      rows="4"
+                      cols="40"></textarea>
+
+
+            <p>
+
+                <button type="submit">
+                    Enroll Now
+                </button>
+
+                <button type="reset">
+                    Clear
+                </button>
+
+            </p>
+
+
+            <p id="form-message"></p>
+
+            <p id="discount-message"></p>
+
+
+        </form>
+
+    </section>
+
+</main>
+
+
+<footer id="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>
+        Email: learnpro@example.com
+    </p>
+
+    <p>
+        Phone: 0300-9876543
+    </p>
+
+    <p>
+        Location: Islamabad, Pakistan
+    </p>
+
+    <a href="#home">
+        Back to Home
+    </a>
+
+    <p>
+        Copyright 2026 LearnPro Academy
+    </p>
+
+</footer>
+
+
+<script>
+
+    const form =
+        document.getElementById("feedback-form");
+
+
+    form.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+
+        const username =
+            document.getElementById("name").value.trim();
+
+        const email =
+            document.getElementById("email").value.trim();
+
+
+        const formMessage =
+            document.getElementById("form-message");
+
+
+        if (username !== "" && email !== "") {
+
+            formMessage.textContent =
+                "Thank you for registering, " +
+                username +
+                "! We will contact you at " +
+                email +
+                ".";
+
+            formMessage.style.color = "green";
+
+        } else {
+
+            formMessage.textContent =
+                "Please fill out both your name and email.";
+
+            formMessage.style.color = "red";
+
+        }
+
+    });
+
+
+    const courseRows =
+        document.querySelectorAll(".course-row");
+
+
+    courseRows.forEach(function (row) {
+
+        row.addEventListener("mouseover", function () {
+
+            row.classList.add("highlight");
+
+        });
+
+
+        row.addEventListener("mouseout", function () {
+
+            row.classList.remove("highlight");
+
+        });
+
+    });
+
+
+    const themeButton =
+        document.getElementById("theme-toggle");
+
+
+    themeButton.addEventListener("click", function () {
+
+        document.body.classList.toggle("dark-mode");
+
+    });
+
+
+    const courseCheckboxes =
+        document.querySelectorAll(".course-fee");
+
+
+    const total =
+        document.getElementById("total");
+
+
+    courseCheckboxes.forEach(function (checkbox) {
+
+        checkbox.addEventListener("change", function () {
+
+            let totalFee = 0;
+
+
+            courseCheckboxes.forEach(function (item) {
+
+                if (item.checked) {
+
+                    totalFee +=
+                        parseInt(item.value);
+
+                }
+
+            });
+
+
+            total.textContent =
+                "Total Course Fee: Rs. " +
+                totalFee.toLocaleString();
+
+        });
+
+    });
+
+
+    const birthYearInput =
+        document.getElementById("birth-year");
+
+
+    const discountMessage =
+        document.getElementById("discount-message");
+
+
+    birthYearInput.addEventListener("input", function () {
+
+        const birthYear =
+            parseInt(birthYearInput.value);
+
+
+        if (!isNaN(birthYear)) {
+
+            const age =
+                2026 - birthYear;
+
+
+            if (age <= 25 || age >= 60) {
+
+                discountMessage.textContent =
+                    "You qualify for the student/senior discount based on your age of " +
+                    age +
+                    ".";
+
+                discountMessage.style.color =
+                    "green";
+
+            } else {
+
+                discountMessage.textContent =
+                    "You do not qualify for the student/senior discount based on your age of " +
+                    age +
+                    ".";
+
+                discountMessage.style.color =
+                    "red";
+
+            }
+
+        } else {
+
+            discountMessage.textContent = "";
+
+        }
+
+    });
+
+
+    const readMoreButton =
+        document.getElementById("read-more-btn");
+
+
+    const moreStory =
+        document.getElementById("more-story");
+
+
+    readMoreButton.addEventListener("click", function () {
+
+        if (
+            moreStory.style.display === "none" ||
+            moreStory.style.display === ""
+        ) {
+
+            moreStory.style.display =
+                "block";
+
+            readMoreButton.textContent =
+                "Read Less";
+
+        } else {
+
+            moreStory.style.display =
+                "none";
+
+            readMoreButton.textContent =
+                "Read More";
+
+        }
+
+    });
+
+
+    const filterButtons =
+        document.querySelectorAll(
+            ".filter-buttons button"
+        );
+
+
+    filterButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const selectedCategory =
+                button.getAttribute("data-filter");
+
+
+            courseRows.forEach(function (row) {
+
+                if (
+                    selectedCategory === "all" ||
+                    row.getAttribute("data-category") ===
+                    selectedCategory
+                ) {
+
+                    row.style.display = "";
+
+                } else {
+
+                    row.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    });
+
+
+    const currentHour =
+        new Date().getHours();
+
+
+    const academyStatus =
+        document.getElementById("academy-status");
+
+
+    if (currentHour >= 8 && currentHour < 18) {
+
+        academyStatus.textContent =
+            "We are Open!";
+
+        academyStatus.style.color =
+            "lightgreen";
+
+    } else {
+
+        academyStatus.textContent =
+            "Closed - Open at 8 AM";
+
+        academyStatus.style.color =
+            "#ff6b6b";
+
+    }
+
+
+    const notesBox =
+        document.getElementById("special-notes");
+
+
+    const characterCount =
+        document.getElementById("character-count");
+
+
+    notesBox.addEventListener("input", function () {
+
+        const remaining =
+            100 - notesBox.value.length;
+
+
+        characterCount.textContent =
+            remaining +
+            " characters remaining";
+
+    });
+
+
+    form.addEventListener("reset", function () {
+
+        setTimeout(function () {
+
+            characterCount.textContent =
+                "100 characters remaining";
+
+
+            formMessage.textContent = "";
+
+
+            discountMessage.textContent = "";
+
+        }, 0);
+
+    });
+
+</script>
+
+
+</body>
+
+</html>
