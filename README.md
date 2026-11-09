@@ -18,7 +18,7 @@ Technologies Used
 - CSS
 - JavaScript (if implemented)
 
-🚀 How to Run the Project
+ How to Run the Project
 
 You can view the live project here:
 
@@ -37,7 +37,7 @@ Note:For the best experience, use a modern browser such as Google Chrome or Mozi
 Courses Offered
 
 | Course | Duration | Fee |
-|---|---|---|
+
 | Web Development | 8 Weeks | Rs. 8,000 |
 | Graphic Designing | 6 Weeks | Rs. 7,000 |
 | Digital Marketing | 8 Weeks | Rs. 9,000 |
@@ -48,6 +48,6 @@ Contact Information
 - Phone: 0300-9876543
 - Location: Islamabad, Pakistan
 
-## Project Purpose
+Project Purpose
 
 This project was created as an academic assignment to demonstrate website structure, content organization, course presentation, and enrollment interface design.
