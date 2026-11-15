@@ -19,20 +19,13 @@ Technologies Used
 - JavaScript (if implemented)
 
  How to Run the Project
-
-You can view the live project here:
-
-
-
-Alternatively, to run it locally:
+ to run it locally:
 
 1. Clone or download this repository.
 2. Open the project folder.
 3. Find the `index.html` file.
 4. Double-click `index.html` to open the website in your browser.
 5. Use the navigation menu to explore courses, schedules, enrollment, and contact information.
-
-Note:For the best experience, use a modern browser such as Google Chrome or Mozilla Firefox.
 
 Courses Offered
 
